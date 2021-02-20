@@ -1,0 +1,26 @@
+{
+  "name": "hashcolon.blog.builder",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HashColon/HashColon.blog.builder.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HashColon/HashColon.blog.builder/issues"
+  },
+  "homepage": "https://github.com/HashColon/HashColon.blog.builder#readme",
+  "dependencies": {
+    "async": "^3.2.0",
+    "fs": "^0.0.1-security"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.31"
+  }
+}
