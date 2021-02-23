@@ -7,15 +7,23 @@ export interface PageHeaderType {
 }
 
 export function getPageHeaderString(page: string): string {
-    // regex matching /* ... */    
-    return page.match(/\/\*([\s\S]*)\*\//)[0];
+    // regex matching /* ... */        
+
+    try {
+        return page.match(/\/\*([\s\S]*)\*\//)[0];
+    } catch { return ''; }
 }
 
 export function getPageHeader(page: string): PageHeaderType {
     // get page header in strings including /*, */
     var str = getPageHeaderString(page);
     // remove /* and */
-    var tmp = JSON.parse(str.substring(2, str.length - 2));
+    var tmp;
+    try {
+        tmp = JSON.parse(str.substring(2, str.length - 2));
+    } catch {
+        tmp = {}
+    }
 
     // reformat 
     return {
